@@ -8,7 +8,7 @@ app.get('/blog/:blogId', (req, res) => {
   //   throw new Error
   // }
 
-  fetch(`${googleApi}/${req.params.blogId}/posts?key=${apiKey}`)
+  fetch(`${googleApi}/${req.params.blogId}/posts?key=${apiKey}&fields=items(title)`)
     .then(data => data.json())
     .then(posts => res.json(posts))
 
