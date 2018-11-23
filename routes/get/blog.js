@@ -3,12 +3,12 @@ const { googleApi, apiKey } = require('./../helpers/blogger'),
   fetch = require('node-fetch'),
   app = express()
 
-app.get('/blog/:id', (req, res) => {
+app.get('/blog/:blogId', (req, res) => {
   // if (!data) {
   //   throw new Error
   // }
 
-  fetch(`${googleApi}/${req.params.id}/posts?key=${apiKey}`)
+  fetch(`${googleApi}/${req.params.blogId}/posts?key=${apiKey}`)
     .then(data => data.json())
     .then(posts => res.json(posts))
 
