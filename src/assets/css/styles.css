@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out .3s
+}
+
+body {
+  background: #E9E9E9;
+  color: #76859C;
+  margin: 0;
+  padding: 0
+}
