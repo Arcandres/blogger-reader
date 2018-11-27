@@ -14,6 +14,8 @@
 </template>
 
 <script>
+require('./css/Home.css')
+
 // @ is an alias to /src
 import BlogForm from '@/components/BlogForm.vue'
 
@@ -24,22 +26,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.header, .section {
-  text-align: center;
-}
-
-.header {
-  background: #ddd;
-  border-bottom: 2px solid #bbb;
-  margin-bottom: 2rem;
-  padding: 2rem
-}
-
-.header h1{
-  color: #7E90B6;
-  margin: 0
-}
-</style>
-
