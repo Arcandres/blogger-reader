@@ -4,9 +4,13 @@ const express = require('express'),
 app
   .use(express.json())
   .use(express.urlencoded({extended: true}))
-  .use(express.static(__dirname + '/public'))
+
+  // Development
+    .use(express.static(__dirname + '/public'))
+  // Production
+    // .use(express.static(__dirname + '/dist'))
   
   // Router
-  .use(require('./routes/routes'))
+    .use(require('./routes/routes'))
 
 .listen(3000)
