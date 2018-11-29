@@ -1,7 +1,7 @@
 <template>
   <form id="BlogForm" class="blog-form">
     <label for="BlogUrl"><b>URL</b></label> - 
-    <input id="BlogUrl" class="blog-url" placeholder="https://www.blog.com">
+    <input id="BlogUrl" class="blog-url" placeholder="https://www.blog.com" required>
     <p><button class="add-blog">+ Add a Blog</button></p>
   </form>
 </template>
