@@ -23,6 +23,10 @@ export default {
   name: 'home',
   components: {
     BlogForm
+  },
+  beforeCreate() {
+    fetch('/blogs.json')
+      
   }
 }
 </script>
