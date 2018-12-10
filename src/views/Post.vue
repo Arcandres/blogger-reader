@@ -1,11 +1,11 @@
 <template>
-  <!--  -->
+  <Post />
 </template>
 
 <script>
 export default {
   name: 'post',
-  components: { Blog }
+  components: { Post }
 }
 </script>
 

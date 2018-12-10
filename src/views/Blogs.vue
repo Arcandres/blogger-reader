@@ -14,30 +14,44 @@ export default {
     return {
       data: [
         {
+          "id": "4582943784",
           "name": "Arcandres",
           "items": [
             {
-              "title": "Aplicaciones para cuidar y reducir el estrés ocular."
+              "id": "17362163",
+              "title": "Aplicaciones para cuidar y reducir el estrés ocular.",
+              "selfLink": "https://www.googleapis.com/blogger/v3/blogs/4964195606923028905/posts/8611549134915353489"
             },
             {
-              "title": "Wallpapers animados para tu escritorio."
+              "id": "17362163",
+              "title": "Wallpapers animados para tu escritorio.",
+              "selfLink": "https://www.googleapis.com/blogger/v3/blogs/4964195606923028905/posts/8611549134915353489"
             },
             {
-              "title": "Top 5 mejores fuentes para tu terminal"
+              "id": "17362163",
+              "title": "Top 5 mejores fuentes para tu terminal",
+              "selfLink": "https://www.googleapis.com/blogger/v3/blogs/4964195606923028905/posts/8611549134915353489"
             }
           ]
         },
         {
+          "id": "4582943784",
           "name": "zkreations",
           "items": [
             {
-              "title": "Como alojar fuentes web sin pagar hosting"
+              "id": "17362163",
+              "title": "Como alojar fuentes web sin pagar hosting",
+              "selfLink": "https://www.googleapis.com/blogger/v3/blogs/4964195606923028905/posts/8611549134915353489"
             },
             {
-              "title": "Instala, optimizar y personalizar fuentes de Google fonts"
+              "id": "17362163",
+              "title": "Instala, optimizar y personalizar fuentes de Google fonts",
+              "selfLink": "https://www.googleapis.com/blogger/v3/blogs/4964195606923028905/posts/8611549134915353489"
             },
             {
-              "title": "Reproductor de video html5 con Video.js"
+              "id": "17362163",
+              "title": "Reproductor de video html5 con Video.js",
+              "selfLink": "https://www.googleapis.com/blogger/v3/blogs/4964195606923028905/posts/8611549134915353489"
             }
           ]
         }

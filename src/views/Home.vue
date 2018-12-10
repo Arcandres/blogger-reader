@@ -18,6 +18,7 @@ require('./css/Home.css')
 
 // @ is an alias to /src
 import BlogForm from '@/components/BlogForm.vue'
+import router from 'vue-router'
 
 export default {
   name: 'home',
@@ -25,8 +26,14 @@ export default {
     BlogForm
   },
   beforeCreate() {
-    fetch('/blogs.json')
-      
+    fetch('./db/blogs.json')
+      .then(data => data)
+      .then(data => {
+        if (data) {
+          this.$router.push({path: '/blogs'})
+        }
+      })
+      .catch(err => console.error(err))
   }
 }
 </script>

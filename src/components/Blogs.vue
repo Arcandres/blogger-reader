@@ -1,11 +1,11 @@
 <template>
   <div id="blogs">
     <ul>
-      <li v-for="blog in blogs">
+      <li :key="blog.id" v-for="blog in blogs">
         <h3>{{ blog.name }}</h3>
         <ul class="posts">
-          <li v-for="item in blog.items">
-            {{ item.title }}
+          <li :key="item.id" v-for="item in blog.items">
+            <router-link :to="'/blog/' + blog.id  + '/post/' + item.id">{{ item.title }}</router-link>
           </li>
         </ul>
       </li>

@@ -3,7 +3,7 @@ const { googleApi, apiKey } = require('./../helpers/blogger'),
   fetch = require('node-fetch'),
   app = express()
 
-app.get('/blog/:blogId/:postId', (req, res) => {
+app.get('/blog/:blogId/post/:postId', (req, res) => {
   // if (!data) {
   //   throw new Error
   // }
