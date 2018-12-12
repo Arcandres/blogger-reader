@@ -1,5 +1,6 @@
 <template>
-  <Blogs v-bind:blogs="data" />
+  <!-- <Blogs :blogs="data" /> -->
+  <p>{{ data }}</p>
 </template>
 
 <script>
@@ -60,10 +61,9 @@ export default {
   },
   beforeCreate() {
     fetch('/blogs')
-      .then(blogs => {
-        console.log(blogs)
-        this.data.push(blogs)
-      })
+      .then(data => data.text())
+      .then(blogs => this.data.push(blogs))
+      .catch(err => console.error(err))
   }
 }
 </script>
