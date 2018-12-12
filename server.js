@@ -6,9 +6,9 @@ app
   .use(express.urlencoded({extended: true}))
 
   // Development
-    .use(express.static(__dirname + '/public'))
+    // .use(express.static(__dirname + '/public'))
   // Production
-    // .use(express.static(__dirname + '/dist'))
+    .use(express.static(__dirname + '/dist'))
   
   // Router
     .use(require('./routes/routes'))
