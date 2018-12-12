@@ -1,6 +1,6 @@
 {
-  "name": "hello-world",
-  "short_name": "hello-world",
+  "name": "blogger-reader",
+  "short_name": "blogger-reader",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",
