@@ -2,8 +2,8 @@ const express = require('express'),
   app = express()
 
 app
-  .use(express.json())
-  .use(express.urlencoded({extended: true}))
+  // .use(express.json())
+  // .use(express.urlencoded({extended: true}))
 
   // Development
     // .use(express.static(__dirname + '/public'))
