@@ -1,7 +1,7 @@
 <template>
-  <form id="BlogForm" class="blog-form" action="/blog">
+  <form id="BlogForm" class="blog-form" action="/blog" v-on:submit.prevent>
     <label for="BlogUrl"><b>URL</b></label> - 
-    <input id="BlogUrl" type="url" class="blog-url" placeholder="https://www.blog.com" required>
+    <input id="BlogUrl" type="url" name="url" class="blog-url" placeholder="https://www.blog.com" required>
     <p><button class="add-blog">+ Add a Blog</button></p>
   </form>
 </template>
