@@ -1,6 +1,5 @@
 <template>
-  <!-- <Blogs :blogs="data" /> -->
-  <p>{{ data }}</p>
+  <Blogs :blogs="data" />
 </template>
 
 <script>
@@ -61,8 +60,8 @@ export default {
   },
   beforeCreate() {
     fetch('/blogs')
-      .then(data => data.text())
-      .then(blogs => this.data.push(blogs))
+      .then(data => data.json())
+      .then(blogs => this.data.push(JSON.stringify(blogs)))
       .catch(err => console.error(err))
   }
 }
