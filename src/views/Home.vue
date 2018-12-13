@@ -7,8 +7,8 @@
       <header>
         <img src="/assets/img/logo.png" alt="Blogger Reader Logo">
         <p>To begin with, first add a <b>Bloggers's</b> blog url.</p>
-        <BlogForm />
       </header>
+      <BlogForm />
     </section>
   </div>
 </template>
@@ -27,12 +27,7 @@ export default {
   },
   beforeCreate() {
     fetch('./db/blogs.json')
-      .then(data => data)
-      .then(data => {
-        if (data) {
-          this.$router.push({path: '/blogs'})
-        }
-      })
+      .then(data => !data ? this.$router.push({path: '/blogs'}) : null)
       .catch(err => console.error(err))
   }
 }
