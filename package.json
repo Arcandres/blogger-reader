@@ -19,7 +19,7 @@
   "devDependencies": {
     "@vue/cli-plugin-pwa": "^3.0.4",
     "@vue/cli-service": "^3.0.4",
-    "electron": "^3.0.9",
+    "electron": "^3.0.11",
     "vue-template-compiler": "^2.5.17"
   },
   "postcss": {
