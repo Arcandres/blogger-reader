@@ -6,7 +6,7 @@ const { googleApi, apiKey } = require('./../helpers/blogger'),
   app = express()
 
 app
-  .get('/blog', (req, res) => {
+  .get('/addBlog', (req, res) => {
     if (!fs.existsSync(temporalPath)) {
       return fetch(`${googleApi}/byurl?url=${req.query.url}&key=${apiKey}`)
         .then(data => data.json())
@@ -16,7 +16,7 @@ app
 
     const blogs = require(temporalPath)
     console.log(blogs.kind)
-    return res.redirect('/')
+    // return res.redirect('/')
   })
 
 module.exports = app

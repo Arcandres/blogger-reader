@@ -1,5 +1,5 @@
 <template>
-  <form id="BlogForm" class="blog-form" action="/blog">
+  <form id="BlogForm" class="blog-form" action="/addBlog">
     <label for="url"><b>URL</b></label> - 
     <input id="url" type="url" name="url" class="blog-url" placeholder="https://www.blog.com" required />
     <p><button class="add-blog">+ Add a Blog</button></p>
