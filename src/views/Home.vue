@@ -27,7 +27,7 @@ export default {
   },
   beforeCreate() {
     fetch('./db/blogs.json')
-      .then(data => !data ? this.$router.push({path: '/blogs'}) : null)
+      .then(data => data ? this.$router.push({path: '/blogs'}) : null)
       .catch(err => console.error(err))
   }
 }
