@@ -2,13 +2,29 @@ const express = require('express'),
   fetch = require('node-fetch'),
   app = express(),
   { googleApi, apiKey } = require('../helpers/blogger'),
-  blogsDB = require('./../db/blogs.json')
+  blogs = require('/home/arcandres/Documents/blogs.json')
 
-app.get('/blogs', (req, res) => {
-  fetch(`https://www.googleapis.com/blogger/v3/blogs/4964195606923028905/posts/?key=AIzaSyA3CsJnWRRu5YoPQqE9vMNKIed7cbOZJ3o`)
-    .then(data => data.json())
-    .then(blogs => res.send(blogs))
-    .catch(err => console.error(err))
-})
+app
+  .get('/blogs', (req, res) => {
+    const data = [],
+      save = blog => data.push(blog)
+
+    let blog = blogs.length
+
+
+
+    while (--blog) {
+      fetch(`${googleApi}/${blogs[blog].id}/posts?key=${apiKey}`)
+        .then(posts => posts.json())
+        .then(posts => {
+          blogs[blog].posts = posts
+          save(blogs[blog])
+        })
+        .catch(err => console.error(err))
+    }
+    setTimeout(() => {
+      res.json(data)
+    }, 0);
+  })
 
 module.exports = app
